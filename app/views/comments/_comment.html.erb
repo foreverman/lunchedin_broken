@@ -1,8 +1,7 @@
 <div class="comment" id="comment_<%= comment.id %>">
   <% if @user && @user.role.name == 'admin' %>
     <div class="comment-delete-link">
-    <%= link_to_remote 'mark as spam', 
-      :url => {:controller => 'comments', :action => 'destroy', :id => comment}, 
+    <%= link_to 'mark as spam', comment_path(comment), remote: true,
       :method => :delete  %>
   </div>
   <% end %>

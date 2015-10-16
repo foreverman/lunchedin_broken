@@ -58,6 +58,7 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   resources :attendees, only: [:destroy]
+  resources :comments, only: [:destroy]
   resources :events do
     member do
       post :finished
@@ -67,7 +68,8 @@ Rails.application.routes.draw do
   end
 
   resources :venues do 
-    resources :tags, :ratings, :comments
+    resources :tags, :ratings
+    resources :comments, except: [:destroy]
     member do
       get 'tag'
     end
