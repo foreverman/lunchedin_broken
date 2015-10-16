@@ -1,0 +1,6 @@
+<%= form_tag(	
+    venue_tags_path(venue),
+    :method => :post, remote: true ) do %>
+	<%= text_field_tag :tag, '', :id => 'new_tag', :size => 10 %>
+	<%= submit_tag "tag it" %>
+<% end %>

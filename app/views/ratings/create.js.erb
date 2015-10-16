@@ -1,0 +1,1 @@
+$("#venue-rating").html("<%= "#{sprintf('%d', @venue.rating * 100)}% approval from #{@venue.ratings.count} people" %>");

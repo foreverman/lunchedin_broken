@@ -1,0 +1,3 @@
+<%= link_to "I love it", venue_ratings_path(@venue, score: 1), method: 'post', remote: true, style: 'color:green' %>
+|
+<%= link_to "I hate it",  venue_ratings_path(@venue, score: 0), method: 'post', remote: true, style: 'color:red' %>
